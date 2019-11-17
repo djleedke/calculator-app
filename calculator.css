@@ -1,0 +1,64 @@
+body {
+    margin:0;
+    background:lightgrey;
+}
+
+.row {
+    height:20%;
+    display: flex;
+}
+
+/* ---------- Output Area ---------- */
+#output {
+    background:rgb(255, 255, 255, .5);
+    font-size:6vw;
+    height:100%;
+    width:75%;
+    display:table;
+}
+
+#output-text{
+    display:table-cell;
+    padding-right:50px;
+    text-align: right;
+    vertical-align:middle;
+}
+
+
+/* ---------- Buttons ---------- */
+#clear {
+    width:25%;
+    background:rgb(0, 0, 0, .3);
+}
+
+#clear:hover {
+    background:rgba(0, 0, 0, 0.15);
+}
+
+#clear:active {
+    background:rgba(0, 0, 0, 0.20);  
+}
+
+button {
+    font-size:6vw;
+    border:none;
+    width:100%;
+    background:rgba(0, 0, 0, .1);
+}
+
+button:hover {
+    background:rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    background:rgba(0, 0, 0, 0.20);
+}
+
+button:focus {
+    outline:0;
+}
+
+.symbol {
+    background:rgba(0, 0, 0, .2);
+}
+
