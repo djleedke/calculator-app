@@ -4,32 +4,33 @@
     </head>
     <body>
         <div class="row">
-            <div id="output"><span id="output-text">1 + 1 = 2</span></div>
-            <button id="clear">AC</button>
+            <div id="output"><span id="output-text">0</span></div>
+            <button onclick="Clear()" id="clear">AC</button>
         </div>
         <div class="row">
-            <button id="number-7" class="number">7</button>
-            <button id="number-8" class="number">8</button>
-            <button id="number-9" class="number">9</button>
-            <button id="divide" class="symbol">/</button>
+            <button onclick="UpdateNumber(7)" id="7" class="number">7</button>
+            <button onclick="UpdateNumber(8)" id="8" class="number">8</button>
+            <button onclick="UpdateNumber(9)" id="9" class="number">9</button>
+            <button onclick="OperatorToggle('/')" id="divide" class="symbol">/</button>
         </div>
         <div class="row">
-            <button id="number-4" class="number">4</button>
-            <button id="number-5" class="number">5</button>
-            <button id="number-6" class="number">6</button>
-            <button id="multiply" class="symbol">x</button>
+            <button onclick="UpdateNumber(4)" id="4" class="number">4</button>
+            <button onclick="UpdateNumber(5)" id="5" class="number">5</button>
+            <button onclick="UpdateNumber(6)" id="6" class="number">6</button>
+            <button onclick="OperatorToggle('*')" id="multiply" class="symbol">x</button>
         </div>
         <div class="row">
-            <button id="number-1" class="number">1</button>
-            <button id="number-2" class="number">2</button>
-            <button id="number-3" class="number">3</button>
-            <button id="subtract" class="symbol">-</button>
+            <button onclick="UpdateNumber(1)" id="1" class="number">1</button>
+            <button onclick="UpdateNumber(2)" id="2" class="number">2</button>
+            <button onclick="UpdateNumber(3)" id="3" class="number">3</button>
+            <button onclick="OperatorToggle('-')" id="subtract" class="symbol">-</button>
         </div>
         <div class="row">
-            <button id="number-0" class="number">0</button>
-            <button id="decimal" class="symbol">.</button>
-            <button id="equals" class="symbol">=</button>
-            <button id="add" class="symbol">+</button>
+            <button onclick="UpdateNumber(0)" id="0" class="number">0</button>
+            <button onclick="UpdateNumber('.')" id="decimal" class="symbol">.</button>
+            <button onclick="Equals()" id="equals" class="symbol">=</button>
+            <button onclick="OperatorToggle('+')" id="add" class="symbol">+</button>
         </div>
+        <script src="calculator.js"></script>
     </body>
 </html>

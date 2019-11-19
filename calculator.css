@@ -19,7 +19,7 @@ body {
 
 #output-text{
     display:table-cell;
-    padding-right:50px;
+    padding-right:15%;
     text-align: right;
     vertical-align:middle;
 }
@@ -40,6 +40,7 @@ body {
 }
 
 button {
+    font-family:inherit;
     font-size:6vw;
     border:none;
     width:100%;
@@ -62,3 +63,6 @@ button:focus {
     background:rgba(0, 0, 0, .2);
 }
 
+.is-pressed {
+    background:rgba(0, 0, 0, .3);;
+}
