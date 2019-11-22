@@ -5,21 +5,36 @@ var operatorToggle = false;
 var numberStorage = 0;
 var currentOperator = "";
 var lastOperator = "";
+var decimal = false;
 
 function UpdateNumber(entry){
 
     if(output.innerHTML === "0"){
-        output.innerHTML = entry;
+            output.innerHTML = entry;
     } else {
+
         //User entered an operator need to start a new number
         if(operatorToggle){     
             output.innerHTML = "";
             operatorToggle = false;
+            decimal = false;
             ResetOperators();
         }
     
         //Appending the number that was entered
-        output.innerHTML += entry;
+        if(entry === "." && decimal === true){
+            console.log("decimal exists");
+        } else {
+            output.innerHTML += entry;
+        }
+
+    }
+
+    if(entry === "." && decimal === false){
+        if(output.innerHTML === "."){
+            output.innerHTML = "0.";
+        }
+        decimal = true;
     }
 }
 
@@ -30,7 +45,8 @@ function OperatorToggle(operator){
 
     //If we are clicking the same operator as before, performing calculation
     //based on the last number we stored.
-    if(lastOperator === currentOperator){
+    if(lastOperator === currentOperator && lastOperator !== ""){
+        console.log('here');
         output.innerHTML = eval(numberStorage + currentOperator + output.innerHTML);
     }
 
@@ -60,7 +76,6 @@ function OperatorToggle(operator){
 
     numberStorage = output.innerHTML;
     lastOperator = currentOperator;
-    DebugReport();
 }
 
 function Equals(){
@@ -117,6 +132,7 @@ function Clear(){
     ResetOperators();
     output.innerHTML = 0;
     operatorToggle= false;
+    decimal = false;
     lastOperator = "";
     numberStorage = 0;
 }
